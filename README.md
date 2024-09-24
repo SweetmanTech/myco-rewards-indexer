@@ -83,6 +83,8 @@ By tracking this event, the indexer provides valuable data about reward distribu
 - To index different events or contracts, modify the `getEventSignature.js` file in the `lib/viem` directory to change the event being tracked.
 - Adjust RPC endpoints in `lib/rpc.js` if needed.
 - To modify how event data is processed or stored, update the `getEventPayload.js` file in the `lib/stack` directory.
+- The point calculation can be adjusted in `getEventPayload.js` by modifying the `points` field in the returned payload.
+- The batch size for processing events can be adjusted in `processBlocks.js` by changing the `BATCH_SIZE` constant.
 
 ## Deployment
 
