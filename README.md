@@ -25,8 +25,8 @@ By using this indexer, developers can focus on building their Zora applications 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/SweetmanTech/myco-token-indexer
-   cd myco-token-indexer
+   git clone https://github.com/SweetmanTech/myco-rewards-indexer
+   cd myco-rewards-indexer
    ```
 
 2. Install dependencies:
@@ -112,7 +112,7 @@ This project is set up for automatic deployment to a DigitalOcean Droplet using 
 
 4. **Prepare the Droplet for Deployment**:
 
-   - Create the project directory: `mkdir -p ~/myco-token-indexer`
+   - Create the project directory: `mkdir -p ~/myco-rewards-indexer`
    - Set up Node.js version management (optional but recommended):
      ```
      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -125,7 +125,7 @@ This project is set up for automatic deployment to a DigitalOcean Droplet using 
 
    - Create a `.env` file in the project directory on your Droplet:
      ```
-     nano ~/myco-token-indexer/.env
+     nano ~/myco-rewards-indexer/.env
      ```
    - Add necessary environment variables (e.g., `STACK_API_KEY`, `BASE_SEPOLIA_FIRST_BLOCK`, etc.)
    - Save the file by pressing `Ctrl + X`, then `Y`, and finally `Enter`.
@@ -149,7 +149,7 @@ This project is set up for automatic deployment to a DigitalOcean Droplet using 
      ```
      pm2 list
      ```
-   - You should see `myco-token-indexer` in the list of processes.
+   - You should see `myco-rewards-indexer` in the list of processes.
 
 With these steps, your project should be automatically deployed to your DigitalOcean Droplet whenever you push changes to your GitHub repository.
 
@@ -160,7 +160,7 @@ If you encounter any issues during deployment:
 1. Check the GitHub Actions logs for any error messages.
 2. Ensure all secrets are correctly set in your GitHub repository.
 3. Verify that your Droplet has sufficient resources (CPU, RAM, disk space).
-4. Check the PM2 logs on your Droplet: `pm2 logs myco-token-indexer`
+4. Check the PM2 logs on your Droplet: `pm2 logs myco-rewards-indexer`
 
 For more detailed logs, you can modify the logging level in the indexer code.
 
