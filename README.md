@@ -62,13 +62,14 @@ To run the indexer:
 
 ## Event Indexed
 
-This indexer specifically tracks the `UpdatedPermissions` event from the Zora Creator 1155 contract. This event is emitted when permissions are updated for a user on a specific token. It includes the following information:
+This indexer specifically tracks the `RewardsDeposit` event from the Zora Protocol Rewards contract. This event is emitted when rewards are deposited. It includes the following information:
 
-- `tokenId`: The ID of the token for which permissions are being updated.
-- `user`: The address of the user whose permissions are being updated.
-- `permissions`: The new permissions value for the user.
+- `from`: The address of the sender depositing the rewards.
+- `to`: The address of the recipient of the rewards.
+- `amount`: The amount of rewards deposited.
+- `reason`: The reason for the reward deposit.
 
-By tracking this event, the indexer provides valuable data about permission changes within Zora collections, which can be useful for building a profile for creators.
+By tracking this event, the indexer provides valuable data about reward distributions within the Zora protocol, which can be useful for analyzing protocol activity and reward patterns.
 
 ## Customization
 
