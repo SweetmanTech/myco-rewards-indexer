@@ -64,10 +64,17 @@ To run the indexer:
 
 This indexer specifically tracks the `RewardsDeposit` event from the Zora Protocol Rewards contract. This event is emitted when rewards are deposited. It includes the following information:
 
-- `from`: The address of the sender depositing the rewards.
-- `to`: The address of the recipient of the rewards.
-- `amount`: The amount of rewards deposited.
-- `reason`: The reason for the reward deposit.
+- `creator`: The address of the creator receiving the reward.
+- `createReferral`: The address of the create referral.
+- `mintReferral`: The address of the mint referral.
+- `firstMinter`: The address of the first minter.
+- `zora`: The address of the Zora protocol.
+- `from`: The address from which the rewards are sent.
+- `creatorReward`: The amount of reward for the creator.
+- `createReferralReward`: The amount of reward for the create referral.
+- `mintReferralReward`: The amount of reward for the mint referral.
+- `firstMinterReward`: The amount of reward for the first minter.
+- `zoraReward`: The amount of reward for the Zora protocol.
 
 By tracking this event, the indexer provides valuable data about reward distributions within the Zora protocol, which can be useful for analyzing protocol activity and reward patterns.
 
