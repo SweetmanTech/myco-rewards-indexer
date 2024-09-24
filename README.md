@@ -62,19 +62,29 @@ To run the indexer:
 
 ## Event Indexed
 
-This indexer specifically tracks the `UpdatedPermissions` event from the Zora Creator 1155 contract. This event is emitted when permissions are updated for a user on a specific token. It includes the following information:
+This indexer specifically tracks the `RewardsDeposit` event from the Zora Protocol Rewards contract. This event is emitted when rewards are deposited. It includes the following information:
 
-- `tokenId`: The ID of the token for which permissions are being updated.
-- `user`: The address of the user whose permissions are being updated.
-- `permissions`: The new permissions value for the user.
+- `creator`: The address of the creator receiving the reward.
+- `createReferral`: The address of the create referral.
+- `mintReferral`: The address of the mint referral.
+- `firstMinter`: The address of the first minter.
+- `zora`: The address of the Zora protocol.
+- `from`: The address from which the rewards are sent.
+- `creatorReward`: The amount of reward for the creator.
+- `createReferralReward`: The amount of reward for the create referral.
+- `mintReferralReward`: The amount of reward for the mint referral.
+- `firstMinterReward`: The amount of reward for the first minter.
+- `zoraReward`: The amount of reward for the Zora protocol.
 
-By tracking this event, the indexer provides valuable data about permission changes within Zora collections, which can be useful for building a profile for creators.
+By tracking this event, the indexer provides valuable data about reward distributions within the Zora protocol, which can be useful for analyzing protocol activity and reward patterns.
 
 ## Customization
 
 - To index different events or contracts, modify the `getEventSignature.js` file in the `lib/viem` directory to change the event being tracked.
 - Adjust RPC endpoints in `lib/rpc.js` if needed.
 - To modify how event data is processed or stored, update the `getEventPayload.js` file in the `lib/stack` directory.
+- The point calculation can be adjusted in `getEventPayload.js` by modifying the `points` field in the returned payload.
+- The batch size for processing events can be adjusted in `processBlocks.js` by changing the `BATCH_SIZE` constant.
 
 ## Deployment
 
