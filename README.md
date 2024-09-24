@@ -36,7 +36,7 @@ By using this indexer, developers can focus on building their Zora applications 
    ```
 
 3. Set up your environment variables:
-   Create a `.env` file in the root directory and add any necessary environment variables.
+   Copy the `.env.example` file to `.env` in the root directory and add any necessary environment variables.
 
 ## Usage
 
