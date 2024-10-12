@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node --no-warnings indexer.mjs",
+    "start": "node --no-warnings indexer.mjs",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [],
@@ -14,8 +14,11 @@
   "dependencies": {
     "@zoralabs/protocol-deployments": "^0.3.2",
     "axios": "^1.7.7",
+    "bottleneck": "^2.19.5",
     "dotenv": "^16.4.5",
+    "node-cache": "^5.1.2",
     "node-fetch": "^2.7.0",
-    "viem": "^2.21.1"
+    "viem": "^2.21.1",
+    "ws": "^8.12.0"
   }
 }
